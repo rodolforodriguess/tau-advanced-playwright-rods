@@ -5,12 +5,11 @@ require('dotenv').config();
 
 export default defineConfig({
   globalSetup: require.resolve('./tests/setup/global-setup'),
-  fullyParallel: false,
+  fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: 0,
-  workers: undefined,
+  workers: 1,
   reporter: 'html',
-  // timeout: 5000,
   use: {
     storageState: 'storageState.json',
     trace: 'on',
@@ -22,24 +21,9 @@ export default defineConfig({
   },
 
   projects: [
-    { 
-      name: 'auth-setup', 
-      testMatch: /auth-setup\.ts/ 
-    },
     {
       name: 'chromium',
-      use: { 
-        ...devices['Desktop Chrome'],
-        storageState: 'storageState.json',
-       },
-    },
-    {
-      name: 'chromium-auth',
-      use: { 
-        ...devices['Desktop Chrome'] ,
-        // storageState: '.auth/admin.json', //use this in case you have multiple projects one per user
-      },
-      dependencies: ['auth-setup'],
+      use: { ...devices['Desktop Chrome'] },
     },
   ],
 });
