@@ -25,6 +25,7 @@ class LoginPage {
   }
 
   async doLogin(email: string, password: string) {
+    console.log(email, password);
     await this.fillEmail(email);
     await this.fillPassword(password);
     await this.loginButton.click();

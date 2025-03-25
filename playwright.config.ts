@@ -8,7 +8,7 @@ export default defineConfig({
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: 0,
-  workers: undefined,
+  workers: 1,
   reporter: 'html',
   use: {
     // storageState: 'storageState.json',
@@ -23,7 +23,8 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: { ...devices['Desktop Chrome']
+       },
     },
     { 
       name: 'auth-setup', 
@@ -33,6 +34,7 @@ export default defineConfig({
       name: 'chromium-auth',
       use: { 
         ...devices['Desktop Chrome'] ,
+        storageState: 'storageState.json'
         // storageState: '.auth/admin.json', //use this in case you have multiple projects one per user
       },
       dependencies: ['auth-setup'],

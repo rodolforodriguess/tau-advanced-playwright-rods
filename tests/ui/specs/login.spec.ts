@@ -18,6 +18,8 @@ test.beforeEach(async ({ page }) => {
 
 test.describe('Book Store - Login', () => {
   test(`successfull login`, async () => {
+    console.log(userName);
+    console.log(password);
     await loginPage.doLogin(userName, password);
     await loginPage.checkLoggedIn();
   });
