@@ -27,8 +27,8 @@ export default defineConfig({
        },
     },
     { 
-      name: 'auth-setup', 
-      testMatch: /auth-setup\.ts/ 
+      name: 'auth-sauce', 
+      testMatch: /auth-sauce\.ts/ 
     },
     {
       name: 'chromium-auth',
@@ -37,7 +37,7 @@ export default defineConfig({
         storageState: 'storageState.json'
         // storageState: '.auth/admin.json', //use this in case you have multiple projects one per user
       },
-      dependencies: ['auth-setup'],
+      dependencies: ['auth-sauce'],
     },
   ],
 });

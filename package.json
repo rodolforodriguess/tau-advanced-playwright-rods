@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test-ui": "npx playwright test tests/ui/",
-    "test-ui-c": "npx playwright test tests/ui/specs --project=chromium",
+    "test-ui-c": "npx playwright test tests/ui/specs --project=chromium --headed",
     "test-ui-h": "npx playwright test tests/ui/specs --headed",
     "test-ui-auth-admin": "npx playwright test profile-stored-auth-multi-role-admin.spec.ts --project=chromium-auth ",
     "test-ui-auth-user": "npx playwright test profile-stored-auth-multi-role-user.spec.ts --project=chromium-auth ",

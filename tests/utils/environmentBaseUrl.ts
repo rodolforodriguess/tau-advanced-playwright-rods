@@ -8,8 +8,8 @@ export default {
       home: 'https://demoqa.com',
     },
     production: {
-      api: 'https://demoqa.com',
-      home: 'https://demoqa.com',
+      api: 'https://www.saucedemo.com/',
+      home: 'https://www.saucedemo.com/',
     },
     staging: {
       api: 'https://demoqa.com',
