@@ -3,5 +3,6 @@ export default {
   homePage: 'home',
   loginPage: 'login',
   profile: 'profile',
-  loginPageSauce: ''
+  loginPageSauce: '',
+  productsPageSauce: 'inventory.html'
 };
